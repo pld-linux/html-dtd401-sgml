@@ -16,6 +16,7 @@ Name:		html-dtd%{ver}-sgml
 Version:	%{year}%{month}%{day}
 Release:	5
 Group:		Applications/Publishing/SGML
+Group(de):	Applikationen/Publizieren/SGML
 Group(pl):	Aplikacje/Publikowanie/SGML
 Copyright:	W3C
 Vendor:		W3C
@@ -26,14 +27,14 @@ Requires:	sgmlparser
 Provides:	html-dtd
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildArch:	noarch
-AutoReqProv:    0
+AutoReqProv:	0
 
 %description
 HTML specification (with DTD, needed to parse HTML code).
 
 %description -l pl
-Specyfikacja HTML (wraz z DTD, potrzebnym do sprawdzania
-poprawno¶ci kodu HTML).
+Specyfikacja HTML (wraz z DTD, potrzebnym do sprawdzania poprawno¶ci
+kodu HTML).
 
 %prep
 %setup -q -c
