@@ -19,6 +19,7 @@ Group:		Applications/Publishing/SGML
 License:	W3C
 Vendor:		W3C
 Source0:	http://www.w3.org/TR/%{year}/%{type}-html%{ver}-%{version}/html%{mver}.tgz
+# Source0-md5:	1ed76627ba80816079649f67023ec7ab
 URL:		http://www.w3.org/TR/html
 Requires:	sgml-common >= 0.5
 Requires:	sgmlparser
