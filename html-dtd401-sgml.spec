@@ -1,11 +1,10 @@
 %define		major	4
 %define		minor	0
 %define		micro	1
-%define		year	1999
 %define		type	REC
+%define		year	1999
 %define		month	12
 %define		day	24
-%define		day	12
 
 %define		mver	%{major}%{minor}
 %define		ver	%{major}%{minor}%{micro}
