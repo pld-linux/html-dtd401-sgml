@@ -16,8 +16,6 @@ Name:		html-dtd%{ver}-sgml
 Version:	%{year}%{month}%{day}
 Release:	5
 Group:		Applications/Publishing/SGML
-Group(de):	Applikationen/Publizieren/SGML
-Group(pl):	Aplikacje/Publikowanie/SGML
 License:	W3C
 Vendor:		W3C
 Source0:	http://www.w3.org/TR/%{year}/%{type}-html%{ver}-%{version}/html%{mver}.tgz
