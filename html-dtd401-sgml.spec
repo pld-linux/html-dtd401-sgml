@@ -18,7 +18,7 @@ Release:	5
 Group:		Applications/Publishing/SGML
 Group(de):	Applikationen/Publizieren/SGML
 Group(pl):	Aplikacje/Publikowanie/SGML
-Copyright:	W3C
+License:	W3C
 Vendor:		W3C
 Source0:	http://www.w3.org/TR/%{year}/%{type}-html%{ver}-%{version}/html%{mver}.tgz
 URL:		http://www.w3.org/TR/html
