@@ -26,7 +26,7 @@ Requires:	sgmlparser
 Provides:	html-dtd
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildArch:	noarch
-AutoReqProv:	0
+AutoReqProv:	no
 
 %description
 HTML specification (with DTD, needed to parse HTML code).
