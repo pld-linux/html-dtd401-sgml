@@ -11,7 +11,7 @@
 %define		v_er	%{major}.%{minor}%{micro}
 %define		v__er	%{major}\.%{minor}%{micro}
 Summary:	HTML %{v_er}
-Summary(pl):	HTML %{v_er}
+Summary(pl.UTF-8):   HTML %{v_er}
 Name:		html-dtd%{ver}-sgml
 Version:	%{year}%{month}%{day}
 Release:	6
@@ -31,8 +31,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 HTML specification (with DTD, needed to parse HTML code).
 
-%description -l pl
-Specyfikacja HTML (wraz z DTD, potrzebnym do sprawdzania poprawno∂ci
+%description -l pl.UTF-8
+Specyfikacja HTML (wraz z DTD, potrzebnym do sprawdzania poprawno≈õci
 kodu HTML).
 
 %prep
