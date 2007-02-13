@@ -11,7 +11,7 @@
 %define		v_er	%{major}.%{minor}%{micro}
 %define		v__er	%{major}\.%{minor}%{micro}
 Summary:	HTML %{v_er}
-Summary(pl.UTF-8):   HTML %{v_er}
+Summary(pl.UTF-8):	HTML %{v_er}
 Name:		html-dtd%{ver}-sgml
 Version:	%{year}%{month}%{day}
 Release:	6
