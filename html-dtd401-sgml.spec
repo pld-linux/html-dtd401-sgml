@@ -1,3 +1,6 @@
+# TODO
+# - make install re-entrant
+
 %define		major	4
 %define		minor	0
 %define		micro	1
@@ -14,15 +17,14 @@ Summary:	HTML %{v_er}
 Summary(pl.UTF-8):	HTML %{v_er}
 Name:		html-dtd%{ver}-sgml
 Version:	%{year}%{month}%{day}
-Release:	6
-Group:		Applications/Publishing/SGML
+Release:	7
 License:	W3C
-Vendor:		W3C
-Source0:	http://www.w3.org/TR/%{year}/%{type}-html%{ver}-%{version}/html%{mver}.tgz
-# Source0-md5:	1ed76627ba80816079649f67023ec7ab
+Group:		Applications/Publishing/SGML
 URL:		http://www.w3.org/TR/html
 Requires:	sgml-common >= 0.6.3-5
 Requires:	sgmlparser
+Source0:	http://www.w3.org/TR/%{year}/%{type}-html%{ver}-%{version}/html%{mver}.tgz
+# Source0-md5:	1ed76627ba80816079649f67023ec7ab
 Provides:	html-dtd
 AutoReqProv:	no
 BuildArch:	noarch
@@ -49,14 +51,14 @@ grep -v OVERRIDE *.cat > $RPM_BUILD_ROOT%{_datadir}/sgml/html/sgml-dtd-%{v_er}/c
 grep -v OVERRIDE *.cat | grep '%{v__er}' | sed 's/%{v__er}/4.0/g' \
        >> $RPM_BUILD_ROOT%{_datadir}/sgml/html/sgml-dtd-%{v_er}/catalog
 
+# used in %doc
 rm -f *.cat
 
-
 %post
-/usr/bin/install-catalog --add /etc/sgml/html-%{v_er}.cat /usr/share/sgml/html/sgml-dtd-%{v_er}/catalog > /dev/null
+%{_bindir}/install-catalog --add %{_sysconfdir}/sgml/html-%{v_er}.cat %{_datadir}/sgml/html/sgml-dtd-%{v_er}/catalog > /dev/null
 
 %postun
-/usr/bin/install-catalog --remove /etc/sgml/html-%{v_er}.cat /usr/share/sgml/html/sgml-dtd-%{v_er}/catalog > /dev/null
+%{_bindir}/install-catalog --remove %{_sysconfdir}/sgml/html-%{v_er}.cat %{_datadir}/sgml/html/sgml-dtd-%{v_er}/catalog > /dev/null
 
 %clean
 rm -rf $RPM_BUILD_ROOT
