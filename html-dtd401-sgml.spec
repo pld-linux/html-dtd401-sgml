@@ -20,11 +20,11 @@ Version:	%{year}%{month}%{day}
 Release:	7
 License:	W3C
 Group:		Applications/Publishing/SGML
-URL:		http://www.w3.org/TR/html
-Requires:	sgml-common >= 0.6.3-5
-Requires:	sgmlparser
 Source0:	http://www.w3.org/TR/%{year}/%{type}-html%{ver}-%{version}/html%{mver}.tgz
 # Source0-md5:	1ed76627ba80816079649f67023ec7ab
+URL:		http://www.w3.org/TR/html/
+Requires:	sgml-common >= 0.6.3-5
+Requires:	sgmlparser
 Provides:	html-dtd
 AutoReqProv:	no
 BuildArch:	noarch
@@ -54,14 +54,14 @@ grep -v OVERRIDE *.cat | grep '%{v__er}' | sed 's/%{v__er}/4.0/g' \
 # used in %doc
 rm -f *.cat
 
+%clean
+rm -rf $RPM_BUILD_ROOT
+
 %post
 %{_bindir}/install-catalog --add %{_sysconfdir}/sgml/html-%{v_er}.cat %{_datadir}/sgml/html/sgml-dtd-%{v_er}/catalog > /dev/null
 
 %postun
 %{_bindir}/install-catalog --remove %{_sysconfdir}/sgml/html-%{v_er}.cat %{_datadir}/sgml/html/sgml-dtd-%{v_er}/catalog > /dev/null
-
-%clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
