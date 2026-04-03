@@ -17,7 +17,7 @@ Summary:	HTML %{v_er}
 Summary(pl.UTF-8):	HTML %{v_er}
 Name:		html-dtd%{ver}-sgml
 Version:	%{year}%{month}%{day}
-Release:	7
+Release:	8
 License:	W3C
 Group:		Applications/Publishing/SGML
 Source0:	http://www.w3.org/TR/%{year}/%{type}-html%{ver}-%{version}/html%{mver}.tgz
